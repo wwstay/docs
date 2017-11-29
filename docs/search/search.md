@@ -1,7 +1,5 @@
 # Search APIs
 
-#### /v1/hotels
-
 The search APIs provides an endpoint to search
 for hotels and apartments within a vicinity and also
 filter the results based on various parameters.
@@ -12,15 +10,15 @@ filter the results based on various parameters.
 
 URL:
 ```
-https://stage.wwstay.com/app/api/v1/hotels?lat=37.2970155&lng=-121.8174109&check_in=2015-08-01&check_out=2015-08-06
+https://stage.wwstay.com/api/v1/search?lat=37.2970155&lng=-121.8174109&check_in=2018-08-01&check_out=2018-08-06
 ```
 
 **Response**
 
 ```json
 {
-    "check-in": "2015-08-01",
-    "check-out": "2015-08-06",
+    "check-in": "2018-08-01",
+    "check-out": "2018-08-06",
     "hotels": [
         {
             "address": "1727 Technology Dr, San Jose, CA 95110, United States",
@@ -51,7 +49,7 @@ https://stage.wwstay.com/app/api/v1/hotels?lat=37.2970155&lng=-121.8174109&check
 
 &nbsp;
 
-## Search Hotel Request Fields
+## Search Request
 
 The search query accepts various filters
 
@@ -74,17 +72,17 @@ The search query accepts various filters
 * Search only 3 and 5 star hotels in London,UK
 
 ```
-/v1/hotels?lat=37.2970155&lng=-121.8174109&check_in=2015-08-01&check_out=2015-08-06&star_rating=3,4
+/v1/hotels?lat=37.2970155&lng=-121.8174109&check_in=2018-08-01&check_out=2018-08-06&star_rating=3,4
 ```
 
 * Search hotels in London,UK but see room rates in INR
 
 ```
-/v1/hotels?lat=37.2970155&lng=-121.8174109&check_in=2015-08-01&check_out=2015-08-06&currency=INR
+/v1/hotels?lat=37.2970155&lng=-121.8174109&check_in=2018-08-01&check_out=2018-08-06&currency=INR
 ```
 
 * Search for more results
 
 ```
-/v1/hotels?lat=37.2970155&lng=-121.8174109&check_in=2015-08-01&check_out=2015-08-06&next_page=2
+/v1/hotels?lat=37.2970155&lng=-121.8174109&check_in=2018-08-01&check_out=2018-08-06&next_page=2
 ```

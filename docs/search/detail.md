@@ -1,31 +1,29 @@
-# Hotel Detail API
+# Detail API
 
-#### /v1/hotels/:id
-
-The hotel API provides an endpoint to find all the 
-details about a particular hotel, including room rates
+The property deatils API provides an endpoint to find all the 
+details about a particular property, including room rates
 and cancellation policies, images, amenities, etc.
 
 ## Request &amp; response
 
-**Request** - Show details for a particular hotel
+**Request** - Show details for a particular property
 
 URL:
 ```
-https://stage.wwstay.com/app/api/v1/hotels/:id
+https://stage.wwstay.com/api/v1/property/:id
 ```
 
 Example
 ```
-https://stage.wwstay.com/app/api/v1/hotels/0wgpigipmp?check_in=2015-08-01&check_out=2015-08-06
+https://stage.wwstay.com/api/v1/property/0wgpigipmp?check_in=2018-08-01&check_out=2018-08-06
 ```
 
 **Response**
 
 ```json
 {
-    "check_in": "2015-08-01",
-    "check_out": "2015-08-06",
+    "check_in": "2018-08-01",
+    "check_out": "2018-08-06",
     "hotel": {
         "address": "16 E 32nd St\r\nNew York, NY 10016\r\nUnited States",
         "currency": "USD",
@@ -61,7 +59,7 @@ https://stage.wwstay.com/app/api/v1/hotels/0wgpigipmp?check_in=2015-08-01&check_
         "name": "Avalon Hotel",
         "rooms": [
             {
-                "cancellation_policy": "We understand that sometimes your travel plans change. We do not charge a change or cancel fee. However, this property (Avalon Hotel) imposes the following penalty to its customers that we are required to pass on: cancellations or changes made before 11:59 PM ((GMT-05:00) Eastern Time (US &amp; Canada)) on Jul 30, 2015 are subject to a 1 Night Room &amp; Tax penalty. Cancellations or changes made after 11:59 PM ((GMT-05:00) Eastern Time (US &amp; Canada)) on Jul 30, 2015 are subject to a 1 Night Room &amp; Tax penalty. The property makes no refunds for no shows or early checkouts.",
+                "cancellation_policy": "We understand that sometimes your travel plans change. We do not charge a change or cancel fee. However, this property (Avalon Hotel) imposes the following penalty to its customers that we are required to pass on: cancellations or changes made before 11:59 PM ((GMT-05:00) Eastern Time (US &amp; Canada)) on Jul 30, 2018 are subject to a 1 Night Room &amp; Tax penalty. Cancellations or changes made after 11:59 PM ((GMT-05:00) Eastern Time (US &amp; Canada)) on Jul 30, 2018 are subject to a 1 Night Room &amp; Tax penalty. The property makes no refunds for no shows or early checkouts.",
                 "free_cancellation": "NA",
                 "inclusions": "Standard Double Room - Special Offer",
                 "rate": "1329.37",
@@ -69,7 +67,7 @@ https://stage.wwstay.com/app/api/v1/hotels/0wgpigipmp?check_in=2015-08-01&check_
                 "type": "Standard Double Room - Special Offer"
             },
             {
-                "cancellation_policy": "We understand that sometimes your travel plans change. We do not charge a change or cancel fee. However, this property (Avalon Hotel) imposes the following penalty to its customers that we are required to pass on: cancellations or changes made before 11:59 PM ((GMT-05:00) Eastern Time (US &amp; Canada)) on Jul 30, 2015 are subject to a 1 Night Room &amp; Tax penalty. Cancellations or changes made after 11:59 PM ((GMT-05:00) Eastern Time (US &amp; Canada)) on Jul 30, 2015 are subject to a 1 Night Room &amp; Tax penalty. The property makes no refunds for no shows or early checkouts.",
+                "cancellation_policy": "We understand that sometimes your travel plans change. We do not charge a change or cancel fee. However, this property (Avalon Hotel) imposes the following penalty to its customers that we are required to pass on: cancellations or changes made before 11:59 PM ((GMT-05:00) Eastern Time (US &amp; Canada)) on Jul 30, 2018 are subject to a 1 Night Room &amp; Tax penalty. Cancellations or changes made after 11:59 PM ((GMT-05:00) Eastern Time (US &amp; Canada)) on Jul 30, 2018 are subject to a 1 Night Room &amp; Tax penalty. The property makes no refunds for no shows or early checkouts.",
                 "free_cancellation": "NA",
                 "inclusions": "Junior Suite, Non Smoking - Special Offer",
                 "rate": "1524.42",
@@ -77,7 +75,7 @@ https://stage.wwstay.com/app/api/v1/hotels/0wgpigipmp?check_in=2015-08-01&check_
                 "type": "Junior Suite, Non Smoking - Special Offer"
             },
             {
-                "cancellation_policy": "We understand that sometimes your travel plans change. We do not charge a change or cancel fee. However, this property (Avalon Hotel) imposes the following penalty to its customers that we are required to pass on: cancellations or changes made before 11:59 PM ((GMT-05:00) Eastern Time (US &amp; Canada)) on Jul 30, 2015 are subject to a 1 Night Room &amp; Tax penalty. Cancellations or changes made after 11:59 PM ((GMT-05:00) Eastern Time (US &amp; Canada)) on Jul 30, 2015 are subject to a 1 Night Room &amp; Tax penalty. The property makes no refunds for no shows or early checkouts.",
+                "cancellation_policy": "We understand that sometimes your travel plans change. We do not charge a change or cancel fee. However, this property (Avalon Hotel) imposes the following penalty to its customers that we are required to pass on: cancellations or changes made before 11:59 PM ((GMT-05:00) Eastern Time (US &amp; Canada)) on Jul 30, 2018 are subject to a 1 Night Room &amp; Tax penalty. Cancellations or changes made after 11:59 PM ((GMT-05:00) Eastern Time (US &amp; Canada)) on Jul 30, 2018 are subject to a 1 Night Room &amp; Tax penalty. The property makes no refunds for no shows or early checkouts.",
                 "free_cancellation": "NA",
                 "inclusions": "Executive Suite, 1 King Bed with Sofabed - Special Offer",
                 "rate": "1865.86",
@@ -93,7 +91,7 @@ https://stage.wwstay.com/app/api/v1/hotels/0wgpigipmp?check_in=2015-08-01&check_
 ```
 &nbsp;
 
-## Hotel Detail Request Fields
+## Detail API Request Fields
 
 The search query accepts various filters
 

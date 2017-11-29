@@ -25,10 +25,10 @@ only over https
 
 The key components used to interact with our systems are the following
 
-* **[Search](search/search.md)** - Search APIs allows 
-querying for properties globally and confirm reservation
+* **[Search](search/search.md)** - Search APIs enables you to easily search for, and book properties globally
+ according to your specified search requirements.
 
-* **[Dashboard](pa.md)** - Dashboard APIs gives access to requests, reservations, invoices, reports, etc.
+* **[Dashboard](pa.md)** - Dashboard APIs gives access to your requests, reservations, invoices, reports, etc.
 
 ## Contact
 

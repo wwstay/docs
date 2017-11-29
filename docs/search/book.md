@@ -1,7 +1,5 @@
 # Book API
 
-#### /v1/book/:room_id
-
 The book API provides an endpoint to book a particular
 room type.  Points to note about the book API -
 
@@ -22,13 +20,13 @@ room type.  Points to note about the book API -
 
 URL:
 ```
-https://stage.wwstay.com/app/api/v1/book/:room_id
+https://stage.wwstay.com/api/v1/book/:room_id
 ```
 
 **Example**
 
 ```
-$ curl -X POST -v -H "Authorization: Bearer fEmpyz2cGde6PppfslzkHCRfP13PgQ" -d "check_in=2015-08-01&check_out=2015-08-06&guest_name=Pradip+Caulagi&guest_email=pradip@wwstay.com&guest_contact=+919876543210" "https://stage.wwstay.com/app/g/api/v1/book/yf24muyn92"
+$ curl -X POST -v -H "Authorization: Bearer fEmpyz2cGde6PppfslzkHCRfP13PgQ" -d "check_in=2018-08-01&check_out=2018-08-06&guest_name=Pradip+Caulagi&guest_email=pradip@wwstay.com&guest_contact=+919876543210" "https://stage.wwstay.com/g/api/v1/book/yf24muyn92"
 
 * Hostname was NOT found in DNS cache
 *   Trying 127.0.0.1...
@@ -44,7 +42,7 @@ $ curl -X POST -v -H "Authorization: Bearer fEmpyz2cGde6PppfslzkHCRfP13PgQ" -d "
 * upload completely sent off: 124 out of 124 bytes
 * HTTP 1.0, assume close after body
 < HTTP/1.0 200 OK
-< Date: Wed, 15 Apr 2015 12:02:17 GMT
+< Date: Wed, 15 Apr 2018 12:02:17 GMT
 < Server: WSGIServer/0.1 Python/2.7.6
 < Vary: Accept-Language, Cookie
 < X-Frame-Options: SAMEORIGIN
@@ -54,9 +52,9 @@ $ curl -X POST -v -H "Authorization: Bearer fEmpyz2cGde6PppfslzkHCRfP13PgQ" -d "
 * Closing connection 0
 
 {
-    "cancellation_policy": "Free cancellation 2 days before 2015-08-01",
-    "check_in": "2015-08-01",
-    "check_out": "2015-08-06",
+    "cancellation_policy": "Free cancellation 2 days before 2018-08-01",
+    "check_in": "2018-08-01",
+    "check_out": "2018-08-06",
     "confirmation_number": "q8f8fmw0fc",
     "status": "ok"
 }
@@ -67,7 +65,7 @@ $ curl -X POST -v -H "Authorization: Bearer fEmpyz2cGde6PppfslzkHCRfP13PgQ" -d "
 **GET request**
 
 ```
-$ curl -X GET -v "https://stage.wwstay.com/app/api/v1/book/yf24muyn92?access_token=fEmpyz2cGde6PppfslzkHCRfP13PgQ"
+$ curl -X GET -v "https://stage.wwstay.com/api/v1/book/yf24muyn92?access_token=fEmpyz2cGde6PppfslzkHCRfP13PgQ"
 
 * Hostname was NOT found in DNS cache
 *   Trying 127.0.0.1...
@@ -79,7 +77,7 @@ $ curl -X GET -v "https://stage.wwstay.com/app/api/v1/book/yf24muyn92?access_tok
 > 
 * HTTP 1.0, assume close after body
 < HTTP/1.0 405 METHOD NOT ALLOWED
-< Date: Wed, 15 Apr 2015 11:36:17 GMT
+< Date: Wed, 15 Apr 2018 11:36:17 GMT
 < Server: WSGIServer/0.1 Python/2.7.6
 < Vary: Accept-Language, Cookie
 < X-Frame-Options: SAMEORIGIN
@@ -93,7 +91,7 @@ $ curl -X GET -v "https://stage.wwstay.com/app/api/v1/book/yf24muyn92?access_tok
 **Request without Authorization token in headers**
 
 ```
-$ curl -X POST -v "https://stage.wwstay.com/app/api/v1/book/yf24muyn92"
+$ curl -X POST -v "https://stage.wwstay.com/api/v1/book/yf24muyn92"
 
 * Hostname was NOT found in DNS cache
 *   Trying 127.0.0.1...
@@ -105,7 +103,7 @@ $ curl -X POST -v "https://stage.wwstay.com/app/api/v1/book/yf24muyn92"
 > 
 * HTTP 1.0, assume close after body
 < HTTP/1.0 403 FORBIDDEN
-< Date: Wed, 15 Apr 2015 11:38:32 GMT
+< Date: Wed, 15 Apr 2018 11:38:32 GMT
 < Server: WSGIServer/0.1 Python/2.7.6
 < Vary: Accept-Language, Cookie
 < X-Frame-Options: SAMEORIGIN
@@ -118,7 +116,7 @@ $ curl -X POST -v "https://stage.wwstay.com/app/api/v1/book/yf24muyn92"
 **Request with missing parameters**
 
 ```
-$ curl -X POST -v -H "Authorization: Bearer fEmpyz2cGde6PppfslzkHCRfP13PgQ" "https://stage.wwstay.com/app/api/v1/book/yf24muyn92"
+$ curl -X POST -v -H "Authorization: Bearer fEmpyz2cGde6PppfslzkHCRfP13PgQ" "https://stage.wwstay.com/api/v1/book/yf24muyn92"
 
 * Hostname was NOT found in DNS cache
 *   Trying 127.0.0.1...
@@ -131,7 +129,7 @@ $ curl -X POST -v -H "Authorization: Bearer fEmpyz2cGde6PppfslzkHCRfP13PgQ" "htt
 > 
 * HTTP 1.0, assume close after body
 < HTTP/1.0 400 BAD REQUEST
-< Date: Wed, 15 Apr 2015 11:40:14 GMT
+< Date: Wed, 15 Apr 2018 11:40:14 GMT
 < Server: WSGIServer/0.1 Python/2.7.6
 < Vary: Accept-Language, Cookie
 < X-Frame-Options: SAMEORIGIN
@@ -146,7 +144,7 @@ Required parameters are missing
 **Wrong dates (see message at the end)**
 
 ```
-$ curl -X POST -v -H "Authorization: Bearer fEmpyz2cGde6PppfslzkHCRfP13PgQ" -d "check_in=2015-09-01&check_out=2015-08-06&guest_name=Pradip+Caulagi&guest_email=pradip@wwstay.com&guest_contact=+919876543210" "https://stage.wwstay.com/app/api/v1/book/yf24muyn92"
+$ curl -X POST -v -H "Authorization: Bearer fEmpyz2cGde6PppfslzkHCRfP13PgQ" -d "check_in=2018-09-01&check_out=2018-08-06&guest_name=Pradip+Caulagi&guest_email=pradip@wwstay.com&guest_contact=+919876543210" "https://stage.wwstay.com/api/v1/book/yf24muyn92"
 
 * Hostname was NOT found in DNS cache
 *   Trying 127.0.0.1...
@@ -162,7 +160,7 @@ $ curl -X POST -v -H "Authorization: Bearer fEmpyz2cGde6PppfslzkHCRfP13PgQ" -d "
 * upload completely sent off: 124 out of 124 bytes
 * HTTP 1.0, assume close after body
 < HTTP/1.0 400 BAD REQUEST
-< Date: Wed, 15 Apr 2015 11:53:55 GMT
+< Date: Wed, 15 Apr 2018 11:53:55 GMT
 < Server: WSGIServer/0.1 Python/2.7.6
 < Vary: Accept-Language, Cookie
 < X-Frame-Options: SAMEORIGIN
