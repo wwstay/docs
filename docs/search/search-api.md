@@ -6,7 +6,7 @@ We currently do bookings in more than 100+ countries!
 
 ## Services Included in our Search API's
 
-* [Search](search.md) - Retrieves a list of properties based on specified <latitude>,<longitude> of destination.
+* [Search](../search.md) - Retrieves a list of properties based on specified <latitude>,<longitude> of destination.
 
 * [Property Details](detail.md) - Returns detailed information about specific property, based on <property_id>.
 
