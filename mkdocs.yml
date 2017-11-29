@@ -1,0 +1,18 @@
+site_name: WWStay API Docs
+site_url: https://docs.wwstay.com/
+site_description: API documentation of WWStay
+repo_url: https://github.com/wwstay/docs
+theme: readthedocs
+site_favicon: favicon.ico
+
+pages:
+- ['index.md', 'Home']
+- ['environments.md', 'Environments']
+- ['oauth.md','OAuth']
+- ['search/search-api.md', 'Search API','API']
+- ['search/search.md','Search API', 'Search Hotels']
+- ['search/hotel-detail.md','Search API', 'Hotel Detail']
+- ['search/book.md', 'Search API','Book a Hotel']
+- ['pa.md', 'Process Automation']
+
+copyright: Copyright &copy; 2015, <a href="https://wwstay.com", target="_blank">WWStay</a>.
