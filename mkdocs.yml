@@ -6,5 +6,8 @@ site_favicon: favicon.ico
 
 pages:
 - ['index.md', 'Home']
-- ['search/search-api.md', 'Search']
+- ['search/search-api.md', 'Search API's]
+- ['search/search.md','Search']
+- ['search/hotel-detail.md','Property Details']
+- ['search/book.md', 'Book']
 copyright: Copyright &copy; 2017, <a href="https://wwstay.com", target="_blank">WWStay</a>.
