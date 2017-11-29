@@ -18,20 +18,17 @@ based system
 * Our API's are designed to have predictable, resource-oriented URLs and
 to use HTTP response codes to indicate API errors. 
 * [JSON](http://json.org/) will be returned in all responses from the API, including errors 
-* [OAuth](http://oauth.net/) will be used to expose our data in a secure manner.
 * [SSL](http://en.wikipedia.org/wiki/Transport_Layer_Security) will be used to encrypt all data and our APIs work
 only over https
-
 
 ## Components
 
 The key components used to interact with our systems are the following
 
-* **[Search](search/search.md)** - The search project allows
-querying for hotels in a given vicinity and booking those hotels
+* **[Search](search/search.md)** - Search APIs allows 
+querying for properties globally and confirm reservation
 
-* **[PA](pa.md)** - The Process Automation (or personal assistant)
-project exposes API to send us requests, get booking data, reports, etc.
+* **[Dashboard](pa.md)** - Dashboard APIs gives access to requests, reservations, invoices, reports, etc.
 
 ## Contact
 
